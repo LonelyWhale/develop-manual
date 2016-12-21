@@ -38,3 +38,36 @@ $ apt-get install docker-engine
 $ service docker start
 $ docker run hello-world
 ```
+#### 查看磁盘容量信息
+```
+$ df -k
+# 以KB为单位显示磁盘使用量和占用率
+$ df -m
+# 以M为单位显示磁盘使用量和占用率
+$ df -hl
+$ du -ck /home
+```
+#### 安装expressvpn
+```
+# 下载
+$ wget https://download-mirror.express-vpn.xyz/clients/linux/xv_1.1.0_amd64.deb
+# 安装
+$ sudo dpkg -i expressvpn_1.1.0_amd64.deb
+# 激活
+$ expressvpn activate
+# connect
+$ expressvpn connect [LOCATION]
+$ expressvpn connect smart
+$ expressvpn disconnect
+$ expressvpn list
+$ expressvpn protocol tcp
+$ expressvpn protocol udp
+$ expressvpn protocol auto
+$ man expressvpn
+$ expressvpn protocol
+# 重启
+$ sudo service expressvpn restart
+# 卸载
+$ sudo dpkg -r expressvpn
+```
+
